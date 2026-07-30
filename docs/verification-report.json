@@ -1,0 +1,381 @@
+{
+  "total": 75,
+  "failed": 0,
+  "results": [
+    {
+      "name": "mock watertight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "mock bbox = unit + worst depth",
+      "ok": true,
+      "detail": "167.00 x 247.33 x 17.10"
+    },
+    {
+      "name": "mock bobbin extent",
+      "ok": true,
+      "detail": "(-65.9000015258789, -89.0, 65.9000015258789, 89.0)"
+    },
+    {
+      "name": "mock features at post plane",
+      "ok": true,
+      "detail": "5 regions (4 posts + hump)"
+    },
+    {
+      "name": "mock hump+standoffs at 17.1 worst-case",
+      "ok": true,
+      "detail": "hump -35.0..35.0 x -63.0..47.0 at 17.1"
+    },
+    {
+      "name": "body watertight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "body winding",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "body bed fit",
+      "ok": true,
+      "detail": "174.2 x 254.5"
+    },
+    {
+      "name": "body bbox",
+      "ok": true,
+      "detail": "174.20 x 254.53, z -0.55..45.25"
+    },
+    {
+      "name": "body front band recessed for the skirt",
+      "ok": true,
+      "detail": "band 170.50 (want 170.50)"
+    },
+    {
+      "name": "shelf opening",
+      "ok": true,
+      "detail": "135.00 x 220.00"
+    },
+    {
+      "name": "shelf seat plane area",
+      "ok": true,
+      "detail": "11884 mm2 at z=8.75"
+    },
+    {
+      "name": "keyhole @x=-55",
+      "ok": true,
+      "detail": "ring area 114"
+    },
+    {
+      "name": "keyhole @x=55",
+      "ok": true,
+      "detail": "ring area 114"
+    },
+    {
+      "name": "keyhole slot runs upward",
+      "ok": true,
+      "detail": "void above entry True/True, solid below True"
+    },
+    {
+      "name": "snap nubs on band",
+      "ok": true,
+      "detail": "nub True, gap False"
+    },
+    {
+      "name": "side vents + cable slot open",
+      "ok": true,
+      "detail": "[False False]"
+    },
+    {
+      "name": "body support-free (rear-face-down)",
+      "ok": true,
+      "detail": "unsupported 0 mm2"
+    },
+    {
+      "name": "first-layer ring width uniform ~1.8",
+      "ok": true,
+      "detail": "8 stations 1.3-2.4 mm"
+    },
+    {
+      "name": "shelf seats on the display rear plate",
+      "ok": true,
+      "detail": "strips x/top/bot 4.18/4.56/4.17, worst-case 3.62"
+    },
+    {
+      "name": "snap tongues freed by slits",
+      "ok": true,
+      "detail": "[False False]"
+    },
+    {
+      "name": "interference body vs display (seated)",
+      "ok": true,
+      "detail": "intersection 0.000 mm3"
+    },
+    {
+      "name": "sweep display OUT through the front",
+      "ok": true,
+      "detail": "worst intersection 0.000 mm3"
+    },
+    {
+      "name": "sweep cover OUT through the rear (below tabs)",
+      "ok": true,
+      "detail": "worst intersection 0.000 mm3"
+    },
+    {
+      "name": "sweep display+cover service removal out the front",
+      "ok": true,
+      "detail": "worst intersection 0.000 mm3"
+    },
+    {
+      "name": "bezel watertight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "bezel winding",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "bezel bbox",
+      "ok": true,
+      "detail": "174.20 x 254.53, z from -3.85"
+    },
+    {
+      "name": "bezel opening",
+      "ok": true,
+      "detail": "140.36 x 221.58 cy 2.38"
+    },
+    {
+      "name": "active-area keep-out",
+      "ok": true,
+      "detail": "margins 2.50/2.50"
+    },
+    {
+      "name": "mat bevel opens toward the face",
+      "ok": true,
+      "detail": "front opening 166.70"
+    },
+    {
+      "name": "skirt covers the tongue slits",
+      "ok": true,
+      "detail": "skirt end z 5.45 vs slit top 5.35"
+    },
+    {
+      "name": "seam reveal is the documented 1.5",
+      "ok": true,
+      "detail": "1.50 mm"
+    },
+    {
+      "name": "bezel felt datum plane",
+      "ok": true,
+      "detail": "11842 mm2 at z=-0.8499999999999996"
+    },
+    {
+      "name": "pad gap",
+      "ok": true,
+      "detail": "1.00 mm for 2 mm foam pads"
+    },
+    {
+      "name": "bezel over-insertion stop gap",
+      "ok": true,
+      "detail": "0.30 mm"
+    },
+    {
+      "name": "bezel seats without stress (exact-touch on retention faces)",
+      "ok": true,
+      "detail": "seat interference 0.00 mm3"
+    },
+    {
+      "name": "zero-float: recess wedges within 0.1 mm of forward travel",
+      "ok": true,
+      "detail": "0.43 mm3 at 0.1 forward (round-2 dead-band was 0.30-0.66)"
+    },
+    {
+      "name": "interference bezel vs display (seated)",
+      "ok": true,
+      "detail": "intersection 0.000 mm3"
+    },
+    {
+      "name": "sweep bezel OFF the front vs display",
+      "ok": true,
+      "detail": "worst intersection 0.000 mm3"
+    },
+    {
+      "name": "bezel snap travel (tongue deflection only)",
+      "ok": true,
+      "detail": "peak traveling interference 25.8 mm3 across 9 tongues"
+    },
+    {
+      "name": "supplied M2.5 screws engage (cover/stand)",
+      "ok": true,
+      "detail": "under-head stack 1.4 / 2.4 mm of a ~6 mm screw"
+    },
+    {
+      "name": "bezel support-free (face-down)",
+      "ok": true,
+      "detail": "unsupported 0 mm2"
+    },
+    {
+      "name": "bezel bed fit",
+      "ok": true,
+      "detail": "174.2 x 254.5"
+    },
+    {
+      "name": "cover watertight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cover winding",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "cover bbox",
+      "ok": true,
+      "detail": "131.00 x 183.00, front z 11.60"
+    },
+    {
+      "name": "cover fits shelf opening",
+      "ok": true,
+      "detail": "131.0 vs 135.0"
+    },
+    {
+      "name": "cover M2.5 hole @(-60.90,-80.00)",
+      "ok": true,
+      "detail": "d 3.14 (want 3.15)"
+    },
+    {
+      "name": "cover M2.5 hole @(-60.90,80.00)",
+      "ok": true,
+      "detail": "d 3.14 (want 3.15)"
+    },
+    {
+      "name": "cover M2.5 hole @(60.90,-80.00)",
+      "ok": true,
+      "detail": "d 3.14 (want 3.15)"
+    },
+    {
+      "name": "cover M2.5 hole @(60.90,80.00)",
+      "ok": true,
+      "detail": "d 3.14 (want 3.15)"
+    },
+    {
+      "name": "cover/post alignment",
+      "ok": true,
+      "detail": "worst 0.000 mm"
+    },
+    {
+      "name": "cover Pi window",
+      "ok": true,
+      "detail": "-41.0..41.0 x -65.0..50.0"
+    },
+    {
+      "name": "USB-C plug budget at window",
+      "ok": true,
+      "detail": "13.0 mm each side (budget 12.0)"
+    },
+    {
+      "name": "cover support-free (rear-face-down)",
+      "ok": true,
+      "detail": "unsupported 0 mm2"
+    },
+    {
+      "name": "interference cover vs display (both at seat datum)",
+      "ok": true,
+      "detail": "intersection 0.000 mm3"
+    },
+    {
+      "name": "interference cover vs body (installed)",
+      "ok": true,
+      "detail": "intersection 0.000 mm3"
+    },
+    {
+      "name": "stand watertight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "stand winding",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "stand bed fit",
+      "ok": true,
+      "detail": "150.0 x 225.0"
+    },
+    {
+      "name": "stand M2.5 hole @(-60.90,-80.00)",
+      "ok": true,
+      "detail": "d 3.14 (want 3.15)"
+    },
+    {
+      "name": "stand M2.5 hole @(-60.90,80.00)",
+      "ok": true,
+      "detail": "d 3.14 (want 3.15)"
+    },
+    {
+      "name": "stand M2.5 hole @(60.90,-80.00)",
+      "ok": true,
+      "detail": "d 3.14 (want 3.15)"
+    },
+    {
+      "name": "stand M2.5 hole @(60.90,80.00)",
+      "ok": true,
+      "detail": "d 3.14 (want 3.15)"
+    },
+    {
+      "name": "stand nothing below ground",
+      "ok": true,
+      "detail": "min w -0.000"
+    },
+    {
+      "name": "stand foot contact spread",
+      "ok": true,
+      "detail": "30 contact verts"
+    },
+    {
+      "name": "interference stand vs display",
+      "ok": true,
+      "detail": "intersection 0.000 mm3"
+    },
+    {
+      "name": "stand support-free",
+      "ok": true,
+      "detail": "unsupported 0 mm2"
+    },
+    {
+      "name": "stand tie-bar chamfer present",
+      "ok": true,
+      "detail": "247 mm2 of 45-deg facets"
+    },
+    {
+      "name": "stand tip-back margin",
+      "ok": true,
+      "detail": "rear contact 130 mm behind glass -> ~1.27 N at the top edge"
+    },
+    {
+      "name": "fit-coupon-body watertight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "fit-coupon-body size",
+      "ok": true,
+      "detail": "62.0 x 62.0 x 18.6"
+    },
+    {
+      "name": "fit-coupon-bezel watertight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "fit-coupon-bezel size",
+      "ok": true,
+      "detail": "62.0 x 62.0 x 9.3"
+    }
+  ]
+}
