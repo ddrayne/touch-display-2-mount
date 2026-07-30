@@ -34,4 +34,4 @@ Data flows one way: `spec.py` → `params.py` → part builders → `build_all.p
 - `stl/` is exported in canonical CAD coordinates for the verification harness; `print/` holds pre-rotated copies for slicing. **No script generates `print/`** — after a rebuild, the affected `print/` STLs must be re-derived (rotated so the correct face lands on the plate, per the README's orientation table) or they go stale.
 - Verification measures STL files on disk, not in-memory solids — always export (via `build_all.py`) before `verify.py`.
 - The frame body is 254.5 mm on a 255 mm bed limit (`spec.BED_LIMIT`); README print settings (no brim/skirt/draft shield) exist to protect that margin.
-- The README references `docs/touch-display-2-10in-product-brief.pdf`, which is not committed; `spec.py`'s docstrings are the authoritative transcription of it.
+- `docs/touch-display-2-10in-product-brief.pdf` is the official drawing source; `spec.py` is its audited transcription (plus one measured correction) — the spec constants, not the PDF, are what the code and checks consume.
