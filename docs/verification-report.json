@@ -1,5 +1,5 @@
 {
-  "total": 75,
+  "total": 85,
   "failed": 0,
   "results": [
     {
@@ -356,6 +356,56 @@
       "name": "stand tip-back margin",
       "ok": true,
       "detail": "rear contact 130 mm behind glass -> ~1.27 N at the top edge"
+    },
+    {
+      "name": "pod watertight",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "interference pod vs frame (hooked)",
+      "ok": true,
+      "detail": "intersection 0.000 mm3"
+    },
+    {
+      "name": "pod blades occupy the vent slots",
+      "ok": true,
+      "detail": "[ True  True]"
+    },
+    {
+      "name": "pod horns above the wall inner face",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "pod M2 pattern 21 x 12.5",
+      "ok": true,
+      "detail": "4 pilots found"
+    },
+    {
+      "name": "FoV cone clear of pod",
+      "ok": true,
+      "detail": "0.00 mm3"
+    },
+    {
+      "name": "FoV cone clear of frame",
+      "ok": true,
+      "detail": "0.00 mm3"
+    },
+    {
+      "name": "FoV cone clear of bezel",
+      "ok": true,
+      "detail": "0.00 mm3"
+    },
+    {
+      "name": "pod ribbon channel under the cable slot",
+      "ok": true,
+      "detail": "channel open at x=0"
+    },
+    {
+      "name": "pod support-free (bottom-face-down)",
+      "ok": true,
+      "detail": "unsupported 0 mm2"
     },
     {
       "name": "fit-coupon-body watertight",

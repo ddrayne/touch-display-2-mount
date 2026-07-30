@@ -1,5 +1,7 @@
 # touch-display-2-mount
 
+![Wall assembly](renders/assembly-wall-front.png)
+
 3D-printed mounts for the **Raspberry Pi Touch Display 2 – 10″ Portrait**
 (with a Raspberry Pi 5 on its back): a three-part **gallery shadow-box wall
 frame** (body + snap-on bezel + rear cover) that makes the display read as
@@ -67,6 +69,9 @@ bar.
 
 | Qty | Item | Used for |
 |---|---|---|
+| 1 | Raspberry Pi Camera Module 3 (standard, optional) | viewer-facing camera in the chin pod |
+| 1 | Camera adapter cable for Pi 5 (standard-to-mini), 200 mm | Cam3 to the Pi 5's free MIPI port; routed length is ~125 mm, so 200 mm is ideal (the cable in the Cam3 box does not fit a Pi 5) |
+| 4 | M2 × 4 mm self-tapping screws | camera board into the pod bosses |
 | 4 | M2.5 screws — **the display's own supplied screws fit** | cover → display posts (or stand → posts) |
 | 2 | 4 mm / #8 pan-head wall screws + plugs | hanging the frame |
 | 8 | soft EVA foam pads, 2 mm thick, ~15 × 8 mm self-adhesive | bezel back, around the opening (compressed to ~1 mm) |
@@ -137,6 +142,18 @@ through differential shrinkage.
 
 For the stand: same steps 2, then screw the stand plate onto the posts
 (supplied screws) and route the cable through the tie-bar notch.
+
+## Camera chin pod (optional)
+
+`print/camera-pod.stl` (~20 g, ~1 h) hangs a Camera Module 3 under the
+frame's chin, facing the viewer — ideal for presence-detection backlight
+wake. No frame changes: two J-hooks tilt into the frame's inner pair of
+bottom intake vents and gravity locks them (lift the pod's nose to remove).
+Mount the camera board **ribbon-up** on the four M2 bosses (flip the image
+in software: `libcamera` rotation 180), run the mini ribbon up the pod's
+concealed tail channel and through the frame's cable slot to the Pi's free
+MIPI port — connect it before hanging the frame. The lens aperture clears
+the full 75° field of view (verified against pod, frame, and bezel).
 
 ## Care notes
 

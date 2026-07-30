@@ -12,6 +12,7 @@ from build123d import Mesher, export_stl
 
 import params  # noqa: F401  (fail fast on parameter errors)
 from bezel import build_bezel
+from camera_pod import build_pod
 from cover import build_cover
 from coupon import build_bezel_coupon, build_body_coupon
 from display_mock import build_display
@@ -37,6 +38,7 @@ def main():
     export(build_bezel(), "bezel")
     export(build_cover(), "cover")
     export(build_stand(), "stand")
+    export(build_pod(), "camera-pod")
     export(build_body_coupon(), "fit-coupon-body")
     export(build_bezel_coupon(), "fit-coupon-bezel")
     export(build_display(), "_display_reference")

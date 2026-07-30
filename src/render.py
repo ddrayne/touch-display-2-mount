@@ -90,6 +90,14 @@ def main():
           title="Cover - rear face (vents, window, zip anchors)")
     scene([(stand, plastic, 1.0)], f"{OUT}/stand-iso.png", elev=20, azim=-50,
           title="Desk stand")
+    pod = load("camera-pod.stl")
+    scene([(pod, plastic, 1.0)], f"{OUT}/camera-pod.png", elev=15, azim=60,
+          title="Camera chin pod (Camera Module 3)")
+    scene(
+        [(upr := None) or (pod, plastic2, 1.0), (frame, plastic, 1.0), (bezel, plastic, 1.0)],
+        f"{OUT}/assembly-chin-pod.png", elev=-25, azim=75,
+        title="Pod hooked under the frame chin (from below/front)",
+    )
     scene([(coupon, plastic2, 1.0), ], f"{OUT}/fit-coupon-body.png", elev=35, azim=-45,
           title="Body corner fit coupon")
     scene([(coupon_b, plastic2, 1.0)], f"{OUT}/fit-coupon-bezel.png", elev=35, azim=-45,

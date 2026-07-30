@@ -681,6 +681,68 @@ def verify_stand(display):
     return m
 
 
+def verify_pod(frame, bezel):
+    import camera_pod as cp
+
+    m = load("camera-pod.stl")
+    check("pod watertight", m.is_watertight)
+    # seated pod must not intersect the frame (hooks inside the slots)
+    interference(m, frame, "pod vs frame (hooked)")
+    # blades really are inside the two bottom vent slots
+    probes = np.array(
+        [[x, -(p.OUT_H / 2) + 1.6, p.VENT_Z + 1.1] for x in p.PRONG_XS]
+    )
+    inside = m.contains(probes)
+    check("pod blades occupy the vent slots", bool(inside.all()), str(inside))
+    # horns hook over the wall's inner face
+    horn = np.array([[x, -(p.CAV_H / 2) + 0.85, p.VENT_Z - 1.0] for x in p.PRONG_XS])
+    check("pod horns above the wall inner face", bool(m.contains(horn).all()), "")
+    # camera pilot pattern (21 x 12.5 around the lens centre)
+    exp = [
+        (sx * spec.CAM_HOLES_X / 2, cp.LENS_CY + sy * spec.CAM_HOLES_Y / 2)
+        for sx in (-1, 1)
+        for sy in (-1, 1)
+    ]
+    # slice through the bosses just behind the board plane
+    found = ring_centres(m, cp.BOARD_FACE_Z - 1.0, max_area=20)
+    ok = all(
+        any(abs(f[0] - ex) < 0.3 and abs(f[1] - ey) < 0.3 for f in found)
+        for ex, ey in exp
+    )
+    check("pod M2 pattern 21 x 12.5", ok, f"{len(found)} pilots found")
+    # unobstructed field of view: a 75-deg cone from the lens must clear
+    # pod, frame, and bezel
+    half = math.radians(spec.CAM_FOV_DEG / 2)
+    length = 80.0
+    cone = trimesh.creation.cone(radius=math.tan(half) * length, height=length)
+    cone.apply_translation([0, 0, -length])  # apex at origin, opening toward -z
+    cone.apply_translation([0, cp.LENS_CY, cp.BOARD_FACE_Z - spec.CAM_FRONT_T - 1.0])
+    for name, mesh_ in (("pod", m), ("frame", frame), ("bezel", bezel)):
+        v = inter_volume(cone, mesh_)
+        check(f"FoV cone clear of {name}", (not math.isnan(v)) and v < 0.5, f"{v:.2f} mm3")
+    # ribbon channel aligns with the frame's cable slot
+    ch = m.contains(np.array([[0, -(p.OUT_H / 2) - 1.2, 40.0]]))
+    check("pod ribbon channel under the cable slot", not ch[0], "channel open at x=0")
+    # print orientation: bottom-face-down -> down = -y
+    area, _ = overhang_area(
+        m,
+        [0, -1, 0],
+        m.bounds[0][1],
+        exempt=[
+            # bay roof (internal 26 mm bridge) + horn undersides (1.6 mm)
+            (
+                np.array([-40, -(p.OUT_H / 2) - 3.0, -3]),
+                np.array([40, -(p.OUT_H / 2) - 2.2, 20]),
+            ),
+            (
+                np.array([-40, -(p.CAV_H / 2) - 0.1, 36]),
+                np.array([40, -(p.CAV_H / 2) + 0.4, 45]),
+            ),
+        ],
+    )
+    check("pod support-free (bottom-face-down)", area < 40, f"unsupported {area:.0f} mm2")
+
+
 def verify_coupons():
     for name in ("fit-coupon-body", "fit-coupon-bezel"):
         m = load(f"{name}.stl")
@@ -701,6 +763,8 @@ def main():
     verify_bezel(display, body)
     verify_cover(display, body)
     verify_stand(display)
+    bezel_mesh = load("bezel.stl")
+    verify_pod(load("frame.stl"), bezel_mesh)
     verify_coupons()
 
     n_fail = sum(1 for r in RESULTS if not r["ok"])

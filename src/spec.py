@@ -145,3 +145,21 @@ ELEPHANT_CHAMFER = 0.5     # chamfer on bed-contact edges
 MIN_WALL = 2.4
 BED_LIMIT = 255.0          # Bambu X1/P1/A1 print 256 mm; print the frame with
                            # no brim/skirt (or a draft-shield-free profile)
+
+
+# ----------------------------------------------- Raspberry Pi Camera Module 3
+# Standard (75 deg FoV) variant. Board dimensions per the well-established
+# module footprint; ASSUMED values are flagged - the pod is a 20-minute
+# print and acts as its own fit coupon.
+CAM_BOARD_W = 25.0         # board width
+CAM_BOARD_H = 24.0         # board height (ribbon exits the bottom edge)
+CAM_HOLES_X = 21.0         # M2 hole pattern, horizontal
+CAM_HOLES_Y = 12.5         # M2 hole pattern, vertical
+CAM_HOLE_TOP = 2.0         # upper hole row from the top edge
+CAM_HOLE_D = 2.2
+CAM_LENS_CY = CAM_HOLE_TOP + CAM_HOLES_Y / 2   # lens centred between rows
+CAM_LENS_D = 12.0          # ASSUMED: lens barrel clearance diameter
+CAM_BOARD_T = 1.6          # ASSUMED: PCB + rear components envelope
+CAM_FRONT_T = 5.0          # ASSUMED: sensor + lens stack above the PCB
+CAM_FOV_DEG = 75.0         # standard variant, diagonal
+CAM_RIBBON_W = 17.0        # 15-pin standard connector end, with margin

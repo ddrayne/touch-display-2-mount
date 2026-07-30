@@ -211,3 +211,30 @@ STAND_WIN_BOT_Y = -65.0
 
 # ---------------------------------------------------------------- coupon
 COUPON_SIZE = 62.0                 # corner test-fit gauge extent
+
+
+# ------------------------------------------------------------- camera pod
+# Chin-mounted pod for a Camera Module 3 (viewer-facing presence camera).
+# Two snap prongs grip the frame's inner pair of bottom intake vent slots
+# (at x = +/-30, 20 x 5 through the 3.3 wall) - no frame changes needed.
+# The pod face tilts POD_TILT_DEG upward; the mini ribbon exits the pod's
+# top and runs through the frame's existing cable slot to the Pi.
+POD_TILT_DEG = 10.0
+POD_W = 76.0                       # spans both prongs with clean margins
+POD_H = 32.0                       # face height (covers board + ribbon bend)
+POD_FACE_T = 2.4
+POD_WALL = 2.4
+POD_DEPTH = 15.0                   # face to back, before the tilt wedge
+POD_R = 5.3                        # matches the frame's cavity corner radius
+POD_CHAMFER = 2.25                 # same arris as the bezel
+POD_APERTURE_D = 10.0              # lens window in the face
+POD_CONE_MARGIN = 8.0              # aperture cone half-angle beyond FoV/2
+PRONG_XS = [-30.0, 30.0]           # the frame's inner bottom vent slots
+PRONG_W = 15.0                     # inside the slot's straight section
+                                   # (20 long with R2.4 corner rounding)
+PRONG_T = 3.6                      # slot is 5 tall
+PRONG_REACH = 9.0                  # through the 3.3 wall + nose inside
+PRONG_NOSE = 1.0                   # snap engagement past the wall
+CAM_SCREW_PILOT = 1.75             # M2 self-tap pilot (+comp applied in CAD)
+POD_LID_T = 2.0
+POD_LID_CLEAR = 0.2
